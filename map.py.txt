@@ -1,5 +1,7 @@
 #FIRST! install folium using pip install folium
 
+#I AM LEARNING FROM THIS: https://www.youtube.com/watch?v=4RnU5qKTfYY - currently at 20.00
+
 import folium
 
 #Imported for vega
