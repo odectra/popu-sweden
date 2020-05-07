@@ -3,6 +3,7 @@
   "features": [
     {
       "type": "Feature",
+      "id": "AL",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
