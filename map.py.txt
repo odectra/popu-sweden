@@ -20,6 +20,9 @@ logoIcon = folium.features.CustomIcon('logo.png', icon_size=(50,50))
 # Vega data
 vis = os.path.join('data', 'vis.json')
 
+#Geojson data
+overlay = os.pth.join('data', 'overlay.json')
+
 # Create markers 
 folium.Marker([42.36300, -71.099500], 
 		popup='<strong>Location One</strong>',
@@ -57,6 +60,9 @@ folium.Marker([42.375140, -71.032450],
 		popup="<strong>Location Five</strong>",
 		tooltip=tooltip,
 		icon=logoIcon).add_to(m),
+		
+# Geojson overlay
+folium.GeJson(overlay, name='cambridge').add_to(m)
 
 #Generate map - this will create an html-file to display file
 m.save('map.html')
