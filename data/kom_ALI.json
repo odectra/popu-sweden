@@ -3,7 +3,7 @@
   "features": [
     {
       "type": "Feature",
-      "id": "AL",
+      "id": "ALE",
       "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -11846,7 +11846,7 @@
       "properties": {
         "lan_code": 14,
         "kom_namn": "Alingsas",
-        "id": "AL",
+        "id": "ALI",
         "geo_point_2d": [
           57.9867946987,
           12.5350880535
