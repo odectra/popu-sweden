@@ -11844,8 +11844,8 @@
       },
       "properties": {
         "lan_code": 14,
-        "kom_namn": "Alingsås",
-        "id": AL,
+        "kom_namn": "Alingsas",
+        "id": "AL",
         "geo_point_2d": [
           57.9867946987,
           12.5350880535
