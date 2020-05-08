@@ -19,7 +19,7 @@ m = folium.Map(location=[57.927733, 12.539132], zoom_start=8)
 tooltip = 'Click For More Info'
 
 #Geojson data
-overlay = os.path.join('data', 'kom_ALI.json')
+overlay = os.path.join('data', 'kom_GBG.json')
 
 # Create markers 
 folium.Marker([57.927733, 12.539132], 
