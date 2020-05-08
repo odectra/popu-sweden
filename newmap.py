@@ -6,6 +6,7 @@ Created on Fri May  8 10:11:30 2020
 """
 
 import folium
+import pandas as pd
 
 #Imported for vega
 import os 
@@ -32,6 +33,7 @@ folium.Marker([57.708711, 11.974598],
 # Geojson overlay
 #folium.GeoJson(overlay, name='alingsas').add_to(m)
 folium.GeoJson(overlay, name='Alingsås').add_to(m)
+
 
 #Generate map - this will create an html-file to display file
 m.save('map.html')
