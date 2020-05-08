@@ -13,7 +13,7 @@ m.choropleth(
   geo_data=kommun,
   name='choropleths', 
   data=kommun_data,
-  columns=['Kommun', 'AR 2019'],
+  columns=['k_ID', 'ar_2019'],
   key_on='feature.ID',
   fill_color='YlGn',
   fill_opacity=0.7,
