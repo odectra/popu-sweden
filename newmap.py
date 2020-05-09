@@ -9,12 +9,23 @@ import folium
 
 #Imported for vega
 import os 
+import json
 
 # Function to load the approriate json file. E.g. GBG = kom_GBG.json
 def load_map(data, fn):
     """This function will load the .json file 'fn' , from 'data' location using os package"""
     result = os.path.join(data, fn)
     return result
+
+def load_prop(path, prop_name):
+    """This function will load property name 'prop_name' from json 
+    file in 'path' as 'path/to/your/file' and return property name """
+    data_file= open(path)
+    data = json.load(data_file)
+    prop = data['features'][0]['properties'][prop_name]
+    return prop
+
+geo_point = load_prop('data/kom_BOS.json', 'geo_point_2d')
 
 #Select municipality 
 kom_name='Bollnas' 
@@ -23,7 +34,7 @@ kom_name='Bollnas'
 overlay = load_map('data', 'kom_BOS.json')
 
 #Create map object (with center point at location)
-m = folium.Map(location=[62.216915, 15.296679], zoom_start=5)
+m = folium.Map(location=geo_point, zoom_start=6)
 
 # Global Tooltip
 tooltip = 'Click For More Info'
@@ -38,6 +49,6 @@ folium.Marker([57.708711, 11.974598],
 folium.GeoJson(overlay, name='selected map', tooltip=tooltip).add_to(m).add_child(folium.Popup(kom_name)).add_to(m)
 
 #Generate map - this will create an html-file to display file
-m.save('map.html')
+m.save('newmap.html')
 
 #open map.html in browser
