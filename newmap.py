@@ -25,7 +25,7 @@ def load_prop(path, prop_name):
     prop = data['features'][0]['properties'][prop_name]
     return prop
 
-# INPUT - but use input instead 
+# INPUT - but use input instead  
 path = 'data/kom_BOS.json'
 path2 = 'kom_BOS.json'
 
