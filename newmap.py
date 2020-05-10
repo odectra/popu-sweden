@@ -26,8 +26,8 @@ def load_prop(path, prop_name):
     return prop
 
 # INPUT - but use input instead  
-path = 'data/kom_BEN.json'
-path2 = 'kom_BEN.json'
+path = 'data/kom_GBG.json'
+path2 = 'kom_GBG.json'
 
 # find geo_point_2d
 geo_point = load_prop(path, 'geo_point_2d')
@@ -35,6 +35,8 @@ geo_point = load_prop(path, 'geo_point_2d')
 # municipality id
 kom_name= load_prop(path, 'kom_namn')
 
+kom_id=load_prop(path,"id")
+print(kom_id)
 # select Geojson data using local load_map() function
 overlay = load_map('data', path2)
 
@@ -46,7 +48,7 @@ tooltip = 'Click For More Info'
 
 # Create marker at Gothenburg
 folium.Marker([57.708711, 11.974598], 
-		popup='<strong>Göteborg</strong>',
+		popup=kom_id + " <strong><u><i>Göteborg</i></u></strong>",
 		tooltip=tooltip,
 		icon=folium.Icon(color= 'green', icon='heart')).add_to(m),
 		
