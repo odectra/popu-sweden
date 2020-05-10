@@ -25,13 +25,18 @@ def load_prop(path, prop_name):
     prop = data['features'][0]['properties'][prop_name]
     return prop
 
-geo_point = load_prop('data/kom_BOS.json', 'geo_point_2d')
+# INPUT - but use input instead 
+path = 'data/kom_BOS.json'
+path2 = 'kom_BOS.json'
 
-#Select municipality 
-kom_name='Bollnas' 
+# find geo_point_2d
+geo_point = load_prop(path, 'geo_point_2d')
+
+# municipality id
+kom_name= load_prop(path, 'id')
 
 # select Geojson data using local load_map() function
-overlay = load_map('data', 'kom_BOS.json')
+overlay = load_map('data', path2)
 
 #Create map object (with center point at location)
 m = folium.Map(location=geo_point, zoom_start=6)
