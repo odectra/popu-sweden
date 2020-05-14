@@ -53,7 +53,10 @@ folium.Marker([57.708711, 11.974598],
 		icon=folium.Icon(color= 'green', icon='heart')).add_to(m),
 		
 # Geojson overlay
-folium.GeoJson(overlay, name='selected map', tooltip=tooltip, ).add_to(m).add_child(folium.Popup(kom_name)).add_to(m)
+folium.GeoJson(overlay, name=kom_name, tooltip=tooltip).add_to(m).add_child(folium.Popup(kom_name)).add_to(m)
+
+#Layer control
+folium.LayerControl(position='topright').add_to(m)
 
 #Generate map - this will create an html-file to display file
 m.save('newmap.html')
